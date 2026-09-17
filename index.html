@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Nomit Choudhary — AI Visual Content Creator & Prompt Engineer</title>
+  <meta name="description" content="Portfolio of Nomit Choudhary — AI Visual Content Creator, Prompt Engineer & Generative Video Artist. Specializing in Jewellery, Product Visuals, Fashion, and AI Commercials.">
+  <meta name="theme-color" content="#0d0208">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@300;400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css?v=21">
+</head>
+<body>
+
+  <!-- Background Scroll Animation Canvas Layer (240 Frames) -->
+  <div class="canvas-viewport" id="canvasViewport">
+    <canvas id="sequenceCanvas"></canvas>
+    <div class="canvas-vignette"></div>
+    <div class="ambient-glow"></div>
+  </div>
+
+  <!-- Minimal Loader Pill -->
+  <div class="loader-overlay" id="loaderOverlay">
+    <div class="loader-badge">
+      <div class="loader-spinner"></div>
+      <span class="loader-text" id="loaderText">Loading AI visual sequence... <strong id="loaderPercent">0%</strong></span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+  </div>
+
+  <!-- Floating Sticky Top Navigation Bar -->
+  <header class="top-navbar" id="topNavbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand">
+        <span class="brand-badge">NC</span>
+        <span class="brand-name">NOMIT<span class="brand-dot">.</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="#home" class="nav-link active">HOME</a>
+        <a href="#about" class="nav-link">ABOUT</a>
+        <a href="#ai-projects" class="nav-link">AI PROJECTS</a>
+        <a href="#social-media" class="nav-link">SOCIAL MEDIA</a>
+        <a href="#ai-video" class="nav-link">AI VIDEO</a>
+        <a href="#skills" class="nav-link">SKILLS</a>
+        <a href="#contact" class="nav-link">CONTACT</a>
+      </nav>
+
+      <a href="#contact" class="nav-cta-btn">
+        <span>LET'S WORK</span>
+        <span class="cta-arrow">↗</span>
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Scrollable Foreground Content -->
+  <div class="page-container">
+
+    <!-- ==========================================================================
+         1. HOME SECTION
+         ========================================================================== -->
+    <section class="hero-section" id="home">
+      <!-- Watermark Background Typography -->
+      <div class="watermark-title" aria-hidden="true">AI CREATOR</div>
+
+      <div class="hero-grid">
+        <!-- Left: Hero Intro -->
+        <div class="hero-content">
+          <div class="hero-intro">
+            <span class="script-accent">Hello, I'm</span>
+            <h1 class="hero-name">NOMIT<br><span class="hero-name-alt">CHOUDHARY</span></h1>
+          </div>
+
+          <div class="hero-role">
+            <span>AI VISUAL</span>
+            <span class="highlight-red">CONTENT CREATOR</span>
+          </div>
+
+          <p class="hero-desc">
+            Crafting photorealistic Generative AI visuals, cinematic video campaigns, and high-impact commercial concepts that captivate audiences and elevate modern brands.
+          </p>
+
+          <div class="hero-action-row">
+            <a href="#ai-projects" class="primary-red-btn">
+              <span>VIEW MY WORK</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <polyline points="19 12 12 19 5 12"></polyline>
+              </svg>
+            </a>
+
+            <div class="hero-social-links">
+              <a href="https://www.instagram.com/nomitchoudhary62?stkn=MXdtbWpoMDV2emJjbQ==" target="_blank" rel="noreferrer" class="hero-social-pill" title="Follow Nomit on Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="hero-social-icon">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                <span>Instagram</span>
+              </a>
+
+              <a href="https://www.linkedin.com/in/nomit-choudhary" target="_blank" rel="noreferrer" class="hero-social-pill" title="Connect on LinkedIn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="hero-social-icon">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+
+            <div class="location-badge">
+              <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              <span>Worldwide &bull; Remote</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: AI Specialization Badges (Interactive Buttons with RGB Light) -->
+        <div class="hero-features" id="heroFeatures">
+          <button type="button" class="feature-badge" data-action="prompt-engineering" aria-label="Explore Prompt Engineering">
+            <div class="feature-icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2a4 4 0 0 1 4 4v1a4 4 0 0 1-4 4 4 4 0 0 1-4-4V6a4 4 0 0 1 4-4z"></path>
+                <path d="M16 14a6 6 0 0 1 6 6v2H2v-2a6 6 0 0 1 6-6"></path>
+                <circle cx="19" cy="8" r="2"></circle>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <strong>PROMPT</strong>
+              <span>ENGINEERING</span>
+            </div>
+          </button>
+
+          <button type="button" class="feature-badge" data-action="photorealistic-visuals" aria-label="Explore Photorealistic AI Visuals">
+            <div class="feature-icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                <circle cx="12" cy="13" r="4"></circle>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <strong>PHOTOREALISTIC</strong>
+              <span>AI VISUALS</span>
+            </div>
+          </button>
+
+          <button type="button" class="feature-badge" data-action="ai-video" aria-label="Explore AI Video and Motion">
+            <div class="feature-icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <strong>AI VIDEO</strong>
+              <span>&amp; MOTION</span>
+            </div>
+          </button>
+
+          <button type="button" class="feature-badge" data-action="commercial-advertising" aria-label="Explore Commercial Advertising">
+            <div class="feature-icon-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+            </div>
+            <div class="feature-text">
+              <strong>COMMERCIAL</strong>
+              <span>ADVERTISING</span>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Subtle Scroll Prompt -->
+      <div class="scroll-prompt" id="scrollPrompt">
+        <div class="mouse-icon">
+          <div class="mouse-wheel"></div>
+        </div>
+        <span>Scroll to Explore</span>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         2. ABOUT SECTION
+         ========================================================================== -->
+    <section class="about-services-section" id="about">
+      <div class="about-services-grid">
+
+        <!-- Left Column: Story & Background -->
+        <div class="about-col glass-card">
+          <div class="section-label-red">ABOUT ME</div>
+          <h2 class="about-heading">ENGINEER MEETS GENAI ARTIST</h2>
+
+          <p class="about-bio">
+            I’m <strong>Nomit Choudhary</strong>, a <strong>B.Tech Computer Science graduate</strong> with a strong interest in <strong>Generative AI</strong> and <strong>visual content creation</strong>.
+          </p>
+
+          <p class="about-sub-bio">
+            I create AI-generated images, product visuals, promotional content, and AI videos using tools such as <strong>ChatGPT</strong>, <strong>Leonardo AI</strong>, <strong>Google AI Studio</strong>, and other AI creative tools. I enjoy turning ideas and references into realistic and engaging visual content through prompt engineering, AI generation, editing, and creative concepts.
+          </p>
+
+          <p class="about-sub-bio">
+            I have also worked on AI-based social media content and promotional videos for local businesses, focusing on realistic visuals, creative storytelling, basic editing, lip-sync, and consistent characters and scenes.
+          </p>
+
+          <p class="about-sub-bio">
+            I’m a quick learner who enjoys experimenting with new AI tools and creative techniques. I’m currently looking to grow my skills and contribute to a creative team working with AI-powered visual content.
+          </p>
+
+          <div class="about-highlights-grid">
+            <div class="highlight-item">
+              <div class="highlight-icon red-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </div>
+              <div class="highlight-info">
+                <strong>B.TECH BACKGROUND</strong>
+                <span>TECHNICAL RIGOR &amp; LOGIC</span>
+              </div>
+            </div>
+
+            <div class="highlight-item">
+              <div class="highlight-icon red-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                  <rect x="9" y="9" width="6" height="6"></rect>
+                  <line x1="9" y1="1" x2="9" y2="4"></line>
+                  <line x1="15" y1="1" x2="15" y2="4"></line>
+                  <line x1="9" y1="20" x2="9" y2="23"></line>
+                  <line x1="15" y1="20" x2="15" y2="23"></line>
+                </svg>
+              </div>
+              <div class="highlight-info">
+                <strong>GENAI SPECIALIST</strong>
+                <span>DIFFUSION &amp; PROMPT ART</span>
+              </div>
+            </div>
+
+            <div class="highlight-item">
+              <div class="highlight-icon red-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+              <div class="highlight-info">
+                <strong>CREATIVE VISION</strong>
+                <span>AESTHETIC LIGHTING &amp; FORM</span>
+              </div>
+            </div>
+
+            <div class="highlight-item">
+              <div class="highlight-icon red-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <div class="highlight-info">
+                <strong>FAST TURNAROUND</strong>
+                <span>COMMERCIAL EXCELLENCE</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="signature-box">
+            <span class="handwritten-signature">Nomit Choudhary</span>
+          </div>
+        </div>
+
+        <!-- Right Column: Creative Strengths -->
+        <div class="services-col">
+          <div class="section-header-divider">
+            <div class="divider-line"></div>
+            <h2 class="section-title">CREATIVE PILLARS</h2>
+            <div class="divider-line"></div>
+          </div>
+
+          <div class="services-grid">
+            <!-- 1. Photorealism -->
+            <div class="service-card glass-card">
+              <div class="service-icon-wrapper red-tint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </div>
+              <h3>PHOTOREALISM</h3>
+              <p>Studio-grade lighting, hyper-detailed skin, reflections, and authentic material textures.</p>
+            </div>
+
+            <!-- 2. Commercial Direction -->
+            <div class="service-card glass-card">
+              <div class="service-icon-wrapper green-tint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+              </div>
+              <h3>BRAND IDENTITY</h3>
+              <p>High-converting product placements and campaign hero banners that drive user retention.</p>
+            </div>
+
+            <!-- 3. Cinematic Video -->
+            <div class="service-card glass-card">
+              <div class="service-icon-wrapper palette-tint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                  <line x1="7" y1="2" x2="7" y2="22"></line>
+                  <line x1="17" y1="2" x2="17" y2="22"></line>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <line x1="2" y1="7" x2="7" y2="7"></line>
+                  <line x1="2" y1="17" x2="7" y2="17"></line>
+                  <line x1="17" y1="17" x2="22" y2="17"></line>
+                  <line x1="17" y1="7" x2="22" y2="7"></line>
+                </svg>
+              </div>
+              <h3>AI MOTION &amp; REELS</h3>
+              <p>Image-to-video synthesis, camera dolly movement, and viral pacing for Instagram &amp; YouTube.</p>
+            </div>
+
+            <!-- 4. Prompt Engineering -->
+            <div class="service-card glass-card">
+              <div class="service-icon-wrapper meta-tint">
+                <span class="code-bracket">&lt;AI&gt;</span>
+              </div>
+              <h3>PROMPT ARCHITECTURE</h3>
+              <p>Complex token weighting, seed preservation, and negative parameter orchestration.</p>
+            </div>
+
+            <!-- 5. Rapid Prototyping -->
+            <div class="service-card glass-card">
+              <div class="service-icon-wrapper speed-tint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <h3>RAPID ITERATION</h3>
+              <p>From prompt concept to commercial-grade visual delivery in record time without studio overhead.</p>
+            </div>
+
+            <!-- 6. Post-Production -->
+            <div class="service-card glass-card">
+              <div class="service-icon-wrapper seo-tint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 20h9"></path>
+                  <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                </svg>
+              </div>
+              <h3>IMAGE RETOUCHING</h3>
+              <p>High-DPI upscaling, color grading, face detailing, and selective inpainting polish.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         3. AI PROJECTS SECTION (MAIN SHOWCASE)
+         ========================================================================== -->
+    <section class="projects-section" id="ai-projects">
+      <div class="section-header-divider">
+        <div class="divider-line"></div>
+        <h2 class="section-title">AI PROJECTS</h2>
+        <div class="divider-line"></div>
+      </div>
+      <p class="section-intro-sub">
+        Explore curated generative artworks across 5 specialized commercial categories.
+      </p>
+
+      <!-- Category Filter Tabs -->
+      <div class="project-filter-tabs">
+        <button class="filter-tab active" data-filter="all">All Visuals</button>
+        <button class="filter-tab" data-filter="jewellery">Jewellery</button>
+        <button class="filter-tab" data-filter="products">Product Visuals</button>
+        <button class="filter-tab" data-filter="fashion">Fashion &amp; Lifestyle</button>
+        <button class="filter-tab" data-filter="advertising">AI Advertising</button>
+        <button class="filter-tab" data-filter="creative">Creative AI</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="ai-projects-grid">
+
+        <!-- 1. Real Jewellery: Diamond Drop Earrings -->
+        <div class="project-card glass-card" data-category="jewellery">
+          <div class="project-visual-box">
+            <img src="assets/jewellery/diamond-earrings.jpg" alt="Solitaire Pear Diamond Drop Earrings" class="project-card-img" loading="lazy">
+            <div class="ai-badge-tag">JEWELLERY</div>
+          </div>
+          <div class="project-meta">
+            <span class="project-type">FINE JEWELLERY</span>
+            <h3 class="project-title">Solitaire Pear Diamond Drop Earrings</h3>
+            <p class="project-desc">Macro studio caustics, micro-pave halos, platinum prongs, and authentic diamond dispersion on suede.</p>
+            <div class="prompt-chip">Prompt: macro 8k, pear cut diamond earrings, micro pave halo, beige velvet box, studio light</div>
+          </div>
+        </div>
+
+        <!-- 2. Real Jewellery: Diamond Statement Necklace -->
+        <div class="project-card glass-card" data-category="jewellery">
+          <div class="project-visual-box">
+            <img src="assets/jewellery/diamond-necklace.png" alt="Marquise & Pear Diamond Bridal Choker" class="project-card-img" loading="lazy">
+            <div class="ai-badge-tag">JEWELLERY</div>
+          </div>
+          <div class="project-meta">
+            <span class="project-type">HAUTE JOAILLERIE</span>
+            <h3 class="project-title">Marquise &amp; Pear Diamond Bridal Choker</h3>
+            <p class="project-desc">Handcrafted platinum setting with alternating marquise clusters and an exquisite pear-cut centerpiece.</p>
+            <div class="prompt-chip">Prompt: high jewelry necklace, marquise diamond collar, cream leather bust, 100mm macro, 8k</div>
+          </div>
+        </div>
+
+        <!-- 3. Real Jewellery: High-Fashion Editorial Model -->
+        <div class="project-card glass-card" data-category="jewellery">
+          <div class="project-visual-box">
+            <img src="assets/jewellery/jewellery-editorial-model.jpg" alt="Emerald Velvet & Diamond High-Fashion Editorial" class="project-card-img model-frame" loading="lazy">
+            <div class="ai-badge-tag">JEWELLERY</div>
+          </div>
+          <div class="project-meta">
+            <span class="project-type">CAMPAIGN EDITORIAL</span>
+            <h3 class="project-title">Emerald Velvet &amp; Diamond Editorial</h3>
+            <p class="project-desc">Full commercial campaign shoot featuring handcrafted diamond parure on an emerald off-shoulder gown.</p>
+            <div class="prompt-chip">Prompt: Vogue jewelry campaign, Indian model, emerald green velvet gown, diamond necklace</div>
+          </div>
+        </div>
+
+        <!-- 4. Real Jewellery: Imperial Polki & Emerald Saree Parure -->
+        <div class="project-card glass-card" data-category="jewellery">
+          <div class="project-visual-box">
+            <img src="assets/jewellery/emerald-polki-saree.jpg" alt="Imperial Polki & Emerald Silk Saree Parure" class="project-card-img model-frame" loading="lazy">
+            <div class="ai-badge-tag">JEWELLERY</div>
+          </div>
+          <div class="project-meta">
+            <span class="project-type">HERITAGE POLKI &amp; KUNDAN</span>
+            <h3 class="project-title">Imperial Polki &amp; Emerald Parure</h3>
+            <p class="project-desc">Uncut syndicate polki diamonds with carved Zambian emeralds on forest-green Banarasi silk.</p>
+            <div class="prompt-chip">Prompt: heritage polki necklace, emerald and ruby drops, green banarasi saree, warm royal light, 8k</div>
+          </div>
+        </div>
+
+        <!-- 5. Real Jewellery: Maharani Royal Blue Rajputana Suite -->
+        <div class="project-card glass-card" data-category="jewellery">
+          <div class="project-visual-box">
+            <img src="assets/jewellery/royal-blue-bride.jpg" alt="Maharani Royal Blue Rajputana Bridal Suite" class="project-card-img model-frame" loading="lazy">
+            <div class="ai-badge-tag">JEWELLERY</div>
+          </div>
+          <div class="project-meta">
+            <span class="project-type">ROYAL BRIDAL JEWELS</span>
+            <h3 class="project-title">Maharani Royal Blue Rajputana Suite</h3>
+            <p class="project-desc">Historic bridal poshak with zardozi embroidery, heavy jadau aad choker, pearl haar, and nath on silver throne.</p>
+            <div class="prompt-chip">Prompt: Rajput bride, royal blue zardozi poshak, heavy kundan choker, pearl haar, palace throne, 8k</div>
+          </div>
+        </div>
+
+        <!-- 6. Real Product: NC Nomit Choudhary ISPE Perfume -->
+        <div class="project-card glass-card" data-category="products">
+          <div class="project-visual-box">
+            <img src="assets/products/nomit-parfum.jpg" alt="NC Nomit Choudhary ISPE Fragrance House" class="project-card-img" loading="lazy">
+            <div class="ai-badge-tag">PRODUCT VISUALS</div>
+          </div>
+          <div class="project-meta">
+            <span class="project-type">LUXURY FRAGRANCE</span>
+            <h3 class="project-title">NC Nomit Choudhary — ISPE Parfum</h3>
+            <p class="project-desc">Flagship bespoke fragrance bottle with custom monogram, golden amber refraction, marble vanity, and white roses.</p>
+            <div class="prompt-chip">Prompt: commercial product photo, NC Nomit Choudhary perfume, crystal stopper, marble, 8k</div>
+          </div>
+        </div>
+
+        <!-- 7. Real Product: Aethelgard Rose-Gold Chronograph Watch -->
+        <div class="project-card glass-card" data-category="products">
+          <div class="project-visual-box">
+            <img src="assets/products/luxury-watch.jpg" alt="Aethelgard Rose-Gold Chronograph Masterpiece" class="project-card-img" loading="lazy">
+            <div class="ai-badge-tag">PRODUCT VISUALS</div>
+          </div>
+          <div class="project-meta">
+            <span class="project-type">HOROLOGY CAMPAIGN</span>
+            <h3 class="project-title">Aethelgard Rose-Gold Chronograph</h3>
+            <p class="project-desc">Two-tone steel and rose gold fluted bezel watch on black polished marble pedestal with architectural arch lighting.</p>
+            <div class="prompt-chip">Prompt: luxury chronograph watch, rose gold fluted bezel, midnight blue dial, marble pedestal, 8k</div>
+          </div>
+        </div>
+
+        <!-- 8. Real Product: Aunchter Openworked Skeleton Calibre -->
+        <div class="project-card glass-card" data-category="products">
+          <div class="project-visual-box">
+            <img src="assets/products/skeleton-watch.jpg" alt="Aunchter Openworked Skeleton Calibre" class="project-card-img" loading="lazy">
+            <div class="ai-badge-tag">PRODUCT VISUALS</div>
+          </div>
+          <div class="project-meta">
+            <span class="project-type">HAUTE HORLOGERIE</span>
+            <h3 class="project-title">Aunchter Skeleton Chronograph</h3>
+            <p class="project-desc">Exposed titanium bridges, rose-gold chapter ring, and dual chronograph registers on copper display plinth.</p>
+            <div class="prompt-chip">Prompt: luxury skeleton watch, exposed mechanical movement, rose gold bezel, studio cove lighting, 8k</div>
+          </div>
+        </div>
+
+        <!-- 9. Real Product: Haute Cuir Handbag -->
+        <div class="project-card glass-card" data-category="products">
+          <div class="project-visual-box">
+            <img src="assets/products/luxury-handbag.jpg" alt="Haute Cuir Luxury Handbag Campaign" class="project-card-img" loading="lazy">
+            <div class="ai-badge-tag">PRODUCT VISUALS</div>
+          </div>
+          <div class="project-meta">
+            <span class="project-type">LUXURY ACCESSORIES</span>
+            <h3 class="project-title">Haute Cuir Leather Handbag</h3>
+            <p class="project-desc">Artisanal leather grain, precision saddle stitching, polished gold hardware, and architectural studio backdrop.</p>
+            <div class="prompt-chip">Prompt: luxury handbag campaign, handcrafted leather texture, studio rim light, editorial 8k</div>
+          </div>
+        </div>
+
+        <!-- 10. Real Product: Glyeron Eau De Parfum -->
+        <div class="project-card glass-card" data-category="products">
+          <div class="project-visual-box">
+            <img src="assets/products/glyeron-parfum.jpg" alt="Glyeron Eau De Parfum Luxury Campaign" class="project-card-img" loading="lazy">
+            <div class="ai-badge-tag">PRODUCT VISUALS</div>
+          </div>
+          <div class="project-meta">
+            <span class="project-type">HAUTE PARFUMERIE</span>
+            <h3 class="project-title">Glyeron Eau De Parfum</h3>
+            <p class="project-desc">Warm golden amber refraction, precision knurled gold atomizer cap, embossed crest typography, and black marble pedestal studio lighting.</p>
+            <div class="prompt-chip">Prompt: luxury perfume bottle, golden liquid amber caustics, knurled gold cap, black marble plinth, dark studio rim light, 8k</div>
+          </div>
+        </div>
+
+        <!-- 10. Real Fashion: Penthouse Twilight Silk Co-Ord -->
+        <div class="project-card glass-card" data-category="fashion">
+          <div class="project-visual-box">
+            <img src="assets/fashion/penthouse-editorial.jpg" alt="Penthouse Twilight Silk Co-Ord Editorial" class="project-card-img model-frame" loading="lazy">
+            <div class="ai-badge-tag">FASHION &amp; LIFESTYLE</div>
+          </div>
+          <div class="project-meta">
+            <span class="project-type">CONTEMPORARY LUXURY</span>
+            <h3 class="project-title">Penthouse Twilight Silk Co-Ord</h3>
+            <p class="project-desc">High-fashion tailored charcoal grey silk co-ord, draped palazzo trousers, and luxury dusk skyline lighting.</p>
+            <div class="prompt-chip">Prompt: high-fashion editorial, modern Indian woman, charcoal grey silk jumpsuit, luxury penthouse, dusk, 8k</div>
+          </div>
+        </div>
+
+        <!-- 11. Real Fashion: Crimson Royal Banarasi Haveli Shoot -->
+        <div class="project-card glass-card" data-category="fashion">
+          <div class="project-visual-box">
+            <img src="assets/fashion/royal-banarasi-saree.jpg" alt="Crimson Royal Banarasi Haveli Shoot" class="project-card-img model-frame" loading="lazy">
+            <div class="ai-badge-tag">FASHION &amp; LIFESTYLE</div>
+          </div>
+          <div class="project-meta">
+            <span class="project-type">COUTURE BRIDAL</span>
+            <h3 class="project-title">Crimson Royal Banarasi Haveli Shoot</h3>
+            <p class="project-desc">Pure mulberry silk draped in authentic kadhwa weaving with heavy gold zari pallu in a sunlit palace courtyard.</p>
+            <div class="prompt-chip">Prompt: editorial bridal photoshoot, crimson red banarasi silk saree, intricate gold zari, palace courtyard, 8k</div>
+          </div>
+        </div>
+
+        <!-- 13. Real AI Advertising: Mahalaxmi FMCG Retail Campaign -->
+        <div class="project-card glass-card" data-category="advertising">
+          <div class="project-visual-box">
+            <img src="assets/advertising/kirana-retail-commercial.jpg" alt="Mahalaxmi FMCG Retail Commercial Campaign" class="project-card-img" loading="lazy">
+            <div class="ai-badge-tag">AI ADVERTISING</div>
+          </div>
+          <div class="project-meta">
+            <span class="project-type">FMCG RETAIL CAMPAIGN</span>
+            <h3 class="project-title">Mahalaxmi Stores — FMCG Campaign</h3>
+            <p class="project-desc">Hyper-realistic Indian kirana store interior, smiling shopkeeper presenting staple FMCG brands, authentic grocery aisles, and warm daytime commercial lighting.</p>
+            <div class="prompt-chip">Prompt: commercial advertisement, Indian kirana store, smiling shopkeeper holding packaged goods, authentic grocery aisles, cinematic commercial lighting, 8k</div>
+          </div>
+        </div>
+
+        <!-- 14. Real Creative AI: Neo-Metropolis Sunset Skyline -->
+        <div class="project-card glass-card" data-category="creative">
+          <div class="project-visual-box">
+            <img src="assets/creative/futuristic-smart-city.jpg" alt="Neo-Metropolis Sunset Skyline" class="project-card-img" loading="lazy">
+            <div class="ai-badge-tag">CREATIVE AI</div>
+          </div>
+          <div class="project-meta">
+            <span class="project-type">SPECULATIVE ARCHITECTURE</span>
+            <h3 class="project-title">Neo-Metropolis Sunset Skyline</h3>
+            <p class="project-desc">Breathtaking futuristic smart city harbor at dusk, twisting skyscrapers, elevated skyways, marina yachts, and evening golden hour illumination.</p>
+            <div class="prompt-chip">Prompt: futuristic smart city skyline, sunset golden hour, twisting architecture towers, harbor marina, penthouse balcony view, 8k</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         4. SOCIAL MEDIA SECTION
+         ========================================================================== -->
+    <section class="social-section" id="social-media">
+      <div class="section-header-divider">
+        <div class="divider-line"></div>
+        <h2 class="section-title">CREATOR HUB &amp; SOCIAL MEDIA</h2>
+        <div class="divider-line"></div>
+      </div>
+      <p class="section-intro-sub">
+        Daily experiments, viral reels, and generative AI breakdowns across platforms.
+      </p>
+
+      <!-- Creator Metrics Bar -->
+      <div class="stats-bar glass-card">
+        <div class="stat-item">
+          <div class="stat-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </div>
+          <div class="stat-content">
+            <span class="stat-number">10M+</span>
+            <span class="stat-desc">TOTAL VIDEO VIEWS</span>
+          </div>
+        </div>
+
+        <div class="stat-divider"></div>
+
+        <div class="stat-item">
+          <div class="stat-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <div class="stat-content">
+            <span class="stat-number">500K+</span>
+            <span class="stat-desc">ACCOUNTS REACHED</span>
+          </div>
+        </div>
+
+        <div class="stat-divider"></div>
+
+        <div class="stat-item">
+          <div class="stat-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </div>
+          <div class="stat-content">
+            <span class="stat-number">98%</span>
+            <span class="stat-desc">POSITIVE ENGAGEMENT</span>
+          </div>
+        </div>
+
+        <div class="stat-divider"></div>
+
+        <div class="stat-item">
+          <div class="stat-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <div class="stat-content">
+            <span class="stat-number">DAILY</span>
+            <span class="stat-desc">AI VISUAL DROPS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3-Phone 3D Perspective Showcase (Curved Triad Layout) -->
+      <div class="reels-stage-container">
+        <div class="reels-stage-glow"></div>
+        <div class="reels-showcase-stage">
+          
+          <!-- Left Phone: Horology AI (Tilted Left) -->
+          <div class="reel-perspective-wrapper phone-pos-left" data-phone-index="1">
+            <div class="phone-frame">
+              <div class="phone-rim-shine"></div>
+              <div class="phone-dynamic-island">
+                <div class="island-camera"></div>
+                <div class="island-mic"></div>
+              </div>
+              
+              <div class="phone-screen has-bg-img" style="background-image: url('assets/products/skeleton-watch.jpg');">
+                <!-- Status Bar -->
+                <div class="phone-status-bar">
+                  <span class="status-time">9:41</span>
+                  <div class="status-icons">
+                    <svg class="status-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 18.25A9.957 9.957 0 0 1 2 12C2 6.48 6.48 2 12 2s10 4.48 10 10c0 2.32-.8 4.45-2.14 6.15l-.62-.64C20.35 16.03 21 14.1 21 12c0-4.97-4.03-9-9-9z"/></svg>
+                    <svg class="status-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 4C7.31 4 3.07 5.9 0 8.98L12 21 24 8.98A16.88 16.88 0 0 0 12 4z"/></svg>
+                    <div class="status-battery"><div class="battery-level"></div></div>
+                  </div>
+                </div>
+
+                <!-- Top Header Overlay -->
+                <div class="reel-overlay-top">
+                  <div class="reel-pill-tag">
+                    <span class="pill-sparkle">💎</span>
+                    <span class="pill-text">HOROLOGY AI</span>
+                  </div>
+                  <div class="reel-views-badge">
+                    <span class="badge-dot"></span>
+                    <span>2.8M Views</span>
+                  </div>
+                </div>
+
+                <!-- Floating Right Interaction Rail (Reels / Social Icons) -->
+                <div class="reel-actions-rail">
+                  <div class="rail-action-item">
+                    <button class="rail-action-btn like-btn" title="Like">
+                      <span class="action-icon">❤️</span>
+                    </button>
+                    <span class="action-label">168K</span>
+                  </div>
+                  <div class="rail-action-item">
+                    <button class="rail-action-btn comment-btn" title="Comments">
+                      <span class="action-icon">💬</span>
+                    </button>
+                    <span class="action-label">2.4K</span>
+                  </div>
+                  <div class="rail-action-item">
+                    <button class="rail-action-btn share-btn" title="Share">
+                      <span class="action-icon">↗</span>
+                    </button>
+                    <span class="action-label">54K</span>
+                  </div>
+                  <div class="rail-action-item">
+                    <button class="rail-action-btn audio-btn" title="Audio">
+                      <span class="action-disc rotating-disc">🎵</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Center Glowing Play Button -->
+                <div class="reel-visual-center">
+                  <div class="play-pulse-ring"></div>
+                  <button class="play-pulse-icon" aria-label="Play Reel">▶</button>
+                </div>
+
+                <!-- Bottom User / Caption Overlay -->
+                <div class="reel-overlay-bottom">
+                  <a href="https://www.instagram.com/nomitchoudhary62?stkn=MXdtbWpoMDV2emJjbQ==" target="_blank" rel="noreferrer" class="reel-user-row" title="Open Instagram @nomitchoudhary62">
+                    <div class="user-avatar-mini" style="background-image: url('assets/products/skeleton-watch.jpg');"></div>
+                    <div class="user-info-text">
+                      <span class="user-handle">@nomitchoudhary62</span>
+                      <span class="user-verified-badge">✓</span>
+                    </div>
+                  </a>
+                  <div class="reel-caption">Aunchter Skeleton Watch: Studio cove lighting &amp; titanium reflections in 60s ⏱️ #HorologyAI</div>
+                  
+                  <!-- Mobile App Dock Navigation Bar -->
+                  <div class="phone-nav-dock">
+                    <span class="dock-item active">🏠</span>
+                    <span class="dock-item">🧭</span>
+                    <span class="dock-item add-icon">＋</span>
+                    <span class="dock-item">🔔</span>
+                    <span class="dock-item">👤</span>
+                  </div>
+                </div>
+
+                <!-- Screen Glass Gloss Highlight -->
+                <div class="screen-gloss-sheen"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Center Phone: NC Nomit Choudhary Perfume (Hero Front & Center) -->
+          <div class="reel-perspective-wrapper phone-pos-center" data-phone-index="2">
+            <div class="phone-frame">
+              <div class="phone-rim-shine"></div>
+              <div class="phone-dynamic-island">
+                <div class="island-camera"></div>
+                <div class="island-mic"></div>
+              </div>
+              
+              <div class="phone-screen has-bg-img" style="background-image: url('assets/products/nomit-parfum.jpg');">
+                <!-- Status Bar -->
+                <div class="phone-status-bar">
+                  <span class="status-time">9:41</span>
+                  <div class="status-icons">
+                    <svg class="status-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 18.25A9.957 9.957 0 0 1 2 12C2 6.48 6.48 2 12 2s10 4.48 10 10c0 2.32-.8 4.45-2.14 6.15l-.62-.64C20.35 16.03 21 14.1 21 12c0-4.97-4.03-9-9-9z"/></svg>
+                    <svg class="status-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 4C7.31 4 3.07 5.9 0 8.98L12 21 24 8.98A16.88 16.88 0 0 0 12 4z"/></svg>
+                    <div class="status-battery"><div class="battery-level"></div></div>
+                  </div>
+                </div>
+
+                <!-- Top Header Overlay -->
+                <div class="reel-overlay-top">
+                  <div class="reel-pill-tag highlight-hero-pill">
+                    <span class="pill-sparkle">🔥</span>
+                    <span class="pill-text">PROMPT BREAKDOWN</span>
+                  </div>
+                  <div class="reel-views-badge highlight-views">
+                    <span class="badge-dot pulse-red-dot"></span>
+                    <span>4.8M Views</span>
+                  </div>
+                </div>
+
+                <!-- Floating Right Interaction Rail (Reels / Social Icons) -->
+                <div class="reel-actions-rail">
+                  <div class="rail-action-item">
+                    <button class="rail-action-btn like-btn is-liked" title="Like">
+                      <span class="action-icon">❤️</span>
+                    </button>
+                    <span class="action-label">320K</span>
+                  </div>
+                  <div class="rail-action-item">
+                    <button class="rail-action-btn comment-btn" title="Comments">
+                      <span class="action-icon">💬</span>
+                    </button>
+                    <span class="action-label">4.2K</span>
+                  </div>
+                  <div class="rail-action-item">
+                    <button class="rail-action-btn share-btn" title="Share">
+                      <span class="action-icon">↗</span>
+                    </button>
+                    <span class="action-label">92K</span>
+                  </div>
+                  <div class="rail-action-item">
+                    <button class="rail-action-btn audio-btn" title="Audio">
+                      <span class="action-disc rotating-disc">🎵</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Center Glowing Play Button -->
+                <div class="reel-visual-center">
+                  <div class="play-pulse-ring hero-pulse"></div>
+                  <button class="play-pulse-icon hero-play-btn" aria-label="Play Reel">▶</button>
+                </div>
+
+                <!-- Bottom User / Caption Overlay -->
+                <div class="reel-overlay-bottom">
+                  <a href="https://www.instagram.com/nomitchoudhary62?stkn=MXdtbWpoMDV2emJjbQ==" target="_blank" rel="noreferrer" class="reel-user-row" title="Open Instagram @nomitchoudhary62">
+                    <div class="user-avatar-mini" style="background-image: url('assets/products/nomit-parfum.jpg');"></div>
+                    <div class="user-info-text">
+                      <span class="user-handle">@nomitchoudhary62</span>
+                      <span class="user-verified-badge">✓</span>
+                    </div>
+                  </a>
+                  <div class="reel-caption">NC ISPE Perfume: Static image to fluid 4K commercial using Veo 🌊 #PerfumeAI</div>
+                  
+                  <!-- Mobile App Dock Navigation Bar -->
+                  <div class="phone-nav-dock">
+                    <span class="dock-item active">🏠</span>
+                    <span class="dock-item">🧭</span>
+                    <span class="dock-item add-icon">＋</span>
+                    <span class="dock-item">🔔</span>
+                    <span class="dock-item">👤</span>
+                  </div>
+                </div>
+
+                <!-- Screen Glass Gloss Highlight -->
+                <div class="screen-gloss-sheen"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Phone: Maharani Royal Blue Bridal Couture (Tilted Right) -->
+          <div class="reel-perspective-wrapper phone-pos-right" data-phone-index="3">
+            <div class="phone-frame">
+              <div class="phone-rim-shine"></div>
+              <div class="phone-dynamic-island">
+                <div class="island-camera"></div>
+                <div class="island-mic"></div>
+              </div>
+              
+              <div class="phone-screen has-bg-img" style="background-image: url('assets/jewellery/royal-blue-bride.jpg');">
+                <!-- Status Bar -->
+                <div class="phone-status-bar">
+                  <span class="status-time">9:41</span>
+                  <div class="status-icons">
+                    <svg class="status-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 18.25A9.957 9.957 0 0 1 2 12C2 6.48 6.48 2 12 2s10 4.48 10 10c0 2.32-.8 4.45-2.14 6.15l-.62-.64C20.35 16.03 21 14.1 21 12c0-4.97-4.03-9-9-9z"/></svg>
+                    <svg class="status-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 4C7.31 4 3.07 5.9 0 8.98L12 21 24 8.98A16.88 16.88 0 0 0 12 4z"/></svg>
+                    <div class="status-battery"><div class="battery-level"></div></div>
+                  </div>
+                </div>
+
+                <!-- Top Header Overlay -->
+                <div class="reel-overlay-top">
+                  <div class="reel-pill-tag">
+                    <span class="pill-sparkle">👑</span>
+                    <span class="pill-text">BRIDAL COUTURE</span>
+                  </div>
+                  <div class="reel-views-badge">
+                    <span class="badge-dot"></span>
+                    <span>5.3M Views</span>
+                  </div>
+                </div>
+
+                <!-- Floating Right Interaction Rail (Reels / Social Icons) -->
+                <div class="reel-actions-rail">
+                  <div class="rail-action-item">
+                    <button class="rail-action-btn like-btn" title="Like">
+                      <span class="action-icon">❤️</span>
+                    </button>
+                    <span class="action-label">410K</span>
+                  </div>
+                  <div class="rail-action-item">
+                    <button class="rail-action-btn comment-btn" title="Comments">
+                      <span class="action-icon">💬</span>
+                    </button>
+                    <span class="action-label">5.7K</span>
+                  </div>
+                  <div class="rail-action-item">
+                    <button class="rail-action-btn share-btn" title="Share">
+                      <span class="action-icon">↗</span>
+                    </button>
+                    <span class="action-label">118K</span>
+                  </div>
+                  <div class="rail-action-item">
+                    <button class="rail-action-btn audio-btn" title="Audio">
+                      <span class="action-disc rotating-disc">🎵</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Center Glowing Play Button -->
+                <div class="reel-visual-center">
+                  <div class="play-pulse-ring"></div>
+                  <button class="play-pulse-icon" aria-label="Play Reel">▶</button>
+                </div>
+
+                <!-- Bottom User / Caption Overlay -->
+                <div class="reel-overlay-bottom">
+                  <a href="https://www.instagram.com/nomitchoudhary62?stkn=MXdtbWpoMDV2emJjbQ==" target="_blank" rel="noreferrer" class="reel-user-row" title="Open Instagram @nomitchoudhary62">
+                    <div class="user-avatar-mini" style="background-image: url('assets/jewellery/royal-blue-bride.jpg');"></div>
+                    <div class="user-info-text">
+                      <span class="user-handle">@nomitchoudhary62</span>
+                      <span class="user-verified-badge">✓</span>
+                    </div>
+                  </a>
+                  <div class="reel-caption">Maharani Royal Blue: Intricate zardozi embroidery &amp; jadau aad choker 👑 #BridalJewels</div>
+                  
+                  <!-- Mobile App Dock Navigation Bar -->
+                  <div class="phone-nav-dock">
+                    <span class="dock-item active">🏠</span>
+                    <span class="dock-item">🧭</span>
+                    <span class="dock-item add-icon">＋</span>
+                    <span class="dock-item">🔔</span>
+                    <span class="dock-item">👤</span>
+                  </div>
+                </div>
+
+                <!-- Screen Glass Gloss Highlight -->
+                <div class="screen-gloss-sheen"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         5. AI VIDEO SECTION
+         ========================================================================== -->
+    <section class="video-section" id="ai-video">
+      <div class="section-header-divider">
+        <div class="divider-line"></div>
+        <h2 class="section-title">AI VIDEO &amp; MOTION</h2>
+        <div class="divider-line"></div>
+      </div>
+      <p class="section-intro-sub">
+        Transforming static conceptual prompts into cinematic, high-definition video motion.
+      </p>
+
+      <!-- Video Capabilities Grid -->
+      <div class="video-capabilities-grid">
+        <div class="video-feature-card glass-card">
+          <div class="feat-icon red-tint">🎬</div>
+          <h3>IMAGE-TO-VIDEO</h3>
+          <p>Breathing lifelike fluid motion, camera pan, zoom, and parallax into high-res still images.</p>
+        </div>
+        <div class="video-feature-card glass-card">
+          <div class="feat-icon green-tint">📢</div>
+          <h3>AI ADVERTISEMENTS</h3>
+          <p>High-converting commercial clips for social campaigns, eCommerce hero headers, and digital billboards.</p>
+        </div>
+        <div class="video-feature-card glass-card">
+          <div class="feat-icon palette-tint">👤</div>
+          <h3>CHARACTER ANIMATION</h3>
+          <p>Consistent character performance, realistic micro-expressions, and eye contact across sequences.</p>
+        </div>
+      </div>
+
+      <!-- Separate Dual Studio Showcase (Before -> After with 9:16 & 16:9 Full Visibility) -->
+      <div class="video-studio-showcase glass-card" id="videoStudioShowcase">
+        <!-- Studio Header & Ratio Controls -->
+        <div class="studio-header">
+          <div class="studio-title-block">
+            <div class="studio-badge-pill">
+              <span class="pulse-red-dot"></span>
+              <span>AI GENERATIVE MOTION LAB</span>
+            </div>
+            <h3 class="studio-heading">STATIC PROMPT VISUAL ⟶ 60 FPS MOTION</h3>
+            <p class="studio-desc">Compare the high-resolution initial prompt generation directly beside the finished cinematic AI video sequence — 100% full view with zero crop.</p>
+          </div>
+
+          <!-- Controls: Aspect Ratio & Video Project Selector -->
+          <div class="studio-controls-bar">
+            <!-- Aspect Ratio Switcher -->
+            <div class="ratio-switch-group" role="group" aria-label="Aspect ratio selector">
+              <button type="button" class="ratio-btn active" data-ratio="9-16" title="Switch to 9:16 Vertical Reel Mode">
+                <span class="ratio-icon">📱</span>
+                <span>9:16 Vertical Reel</span>
+              </button>
+              <button type="button" class="ratio-btn" data-ratio="16-9" title="Switch to 16:9 Cinematic Widescreen Mode">
+                <span class="ratio-icon">🎬</span>
+                <span>16:9 Widescreen</span>
+              </button>
+            </div>
+
+            <!-- Project Selector Switcher -->
+            <div class="project-switch-group" role="group" aria-label="Video project selector">
+              <button type="button" class="project-switch-btn active" data-project="commercial" title="Revitalize Overnight Skincare Commercial">
+                <span>Skincare Commercial</span>
+              </button>
+              <button type="button" class="project-switch-btn" data-project="character" title="Character Editorial Motion">
+                <span>Character Animation</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Separate Dual Stage: Left (Before Static) & Right (After Video) -->
+        <div class="studio-dual-stage ratio-9-16" id="studioDualStage">
+          
+          <!-- CARD 1: BEFORE (Static Initial Prompt Visual) -->
+          <div class="studio-card studio-before-card">
+            <div class="studio-card-header">
+              <div class="card-status-pill before-pill">
+                <span class="pill-sparkle">📸</span>
+                <span>BEFORE: STATIC AI IMAGE</span>
+              </div>
+              <span class="card-tech-tag">8K RAW PROMPT</span>
+            </div>
+
+            <div class="studio-media-frame">
+              <img src="assets/products/revitalize-overnight-916.jpg" 
+                   alt="Static AI Image - Initial Prompt" 
+                   class="studio-image-element" 
+                   id="studioStaticImg"
+                   loading="eager">
+              <div class="studio-frame-glare"></div>
+            </div>
+
+            <div class="studio-card-footer">
+              <div class="studio-card-meta">
+                <span class="meta-title" id="staticMetaTitle">Revitalize Overnight • Initial Prompt</span>
+                <span class="meta-sub" id="staticMetaSub">Prompt: Frosted glass jar, brushed gunmetal lid, soft botanical backdrop, 8k</span>
+              </div>
+              <span class="studio-quality-badge">HIGH RESOLUTION STILL</span>
+            </div>
+          </div>
+
+          <!-- CARD 2: AFTER (60 FPS Generative AI Video) -->
+          <div class="studio-card studio-after-card">
+            <div class="studio-card-header">
+              <div class="card-status-pill after-pill">
+                <span class="pulse-red-dot"></span>
+                <span>AFTER: 60FPS AI VIDEO</span>
+              </div>
+              <span class="card-tech-tag motion-tag">FLUID MOTION ACTIVE</span>
+            </div>
+
+            <div class="studio-media-frame">
+              <video src="assets/videos/product-commercial.mp4" 
+                     autoplay 
+                     loop 
+                     muted 
+                     playsinline 
+                     webkit-playsinline
+                     preload="auto"
+                     class="studio-video-element" 
+                     id="studioVideoEl"></video>
+              <div class="studio-frame-glare"></div>
+
+              <!-- Interactive Floating Video Controls -->
+              <div class="video-floating-controls">
+                <button type="button" class="vid-ctrl-btn" id="vidPlayToggle" aria-label="Play or pause video" title="Play/Pause">
+                  <span id="vidPlayIcon">❚❚</span>
+                </button>
+                <button type="button" class="vid-ctrl-btn" id="vidMuteToggle" aria-label="Toggle mute" title="Mute/Unmute">
+                  <span id="vidMuteIcon">🔇</span>
+                </button>
+                <div class="vid-progress-track" id="vidProgressTrack" title="Seek video timeline">
+                  <div class="vid-progress-fill" id="vidProgressFill"></div>
+                </div>
+                <span class="vid-badge-60fps">60 FPS</span>
+              </div>
+            </div>
+
+            <div class="studio-card-footer">
+              <div class="studio-card-meta">
+                <span class="meta-title" id="videoMetaTitle">Cinematic Commercial • Fluid Motion</span>
+                <span class="meta-sub" id="videoMetaSub">Veo &amp; Flow AI motion synthesis • Zero crop full visibility</span>
+              </div>
+              <span class="studio-quality-badge ultra-badge">100% VISIBLE • FULL FRAME</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         6. SKILLS & TOOLS SECTION
+         ========================================================================== -->
+    <section class="skills-section" id="skills">
+      <div class="section-header-divider">
+        <div class="divider-line"></div>
+        <h2 class="section-title">SKILLS &amp; TOOLS</h2>
+        <div class="divider-line"></div>
+      </div>
+      <p class="section-intro-sub">
+        Mastery over generative prompt pipelines and production toolsets.
+      </p>
+
+      <div class="skills-tools-grid">
+
+        <!-- Left: Core Skills -->
+        <div class="skills-col glass-card">
+          <span class="col-kicker">// CORE EXPERTISE</span>
+          <h3 class="col-title">CREATIVE SKILLS</h3>
+
+          <div class="skills-meter-list">
+            <div class="skill-row">
+              <div class="skill-info-line">
+                <span>AI Image Generation</span>
+                <span class="skill-val">Expert</span>
+              </div>
+              <div class="skill-meter"><div class="meter-fill" style="width: 98%;"></div></div>
+            </div>
+
+            <div class="skill-row">
+              <div class="skill-info-line">
+                <span>Prompt Engineering</span>
+                <span class="skill-val">Advanced</span>
+              </div>
+              <div class="skill-meter"><div class="meter-fill" style="width: 95%;"></div></div>
+            </div>
+
+            <div class="skill-row">
+              <div class="skill-info-line">
+                <span>AI Video Synthesis</span>
+                <span class="skill-val">Expert</span>
+              </div>
+              <div class="skill-meter"><div class="meter-fill" style="width: 92%;"></div></div>
+            </div>
+
+            <div class="skill-row">
+              <div class="skill-info-line">
+                <span>Image Editing &amp; Inpainting</span>
+                <span class="skill-val">Precision</span>
+              </div>
+              <div class="skill-meter"><div class="meter-fill" style="width: 90%;"></div></div>
+            </div>
+
+            <div class="skill-row">
+              <div class="skill-info-line">
+                <span>Visual Composition &amp; Lighting</span>
+                <span class="skill-val">High-End</span>
+              </div>
+              <div class="skill-meter"><div class="meter-fill" style="width: 94%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Tools Stack (Strictly the user's tools) -->
+        <div class="tools-col glass-card">
+          <span class="col-kicker">// PRODUCTION STACK</span>
+          <h3 class="col-title">TOOLS I ACTUALLY USE</h3>
+          <p class="tools-lead">No bloated tool lists. Only the battle-tested generative AI suites used to deliver world-class client work.</p>
+
+          <div class="verified-tools-grid">
+            <!-- 1. ChatGPT -->
+            <div class="tool-card">
+              <div class="tool-icon-box chatgpt-box">
+                <span>GPT</span>
+              </div>
+              <div class="tool-details">
+                <h4>ChatGPT</h4>
+                <span>Prompt Structuring &amp; Concept Ideation</span>
+              </div>
+            </div>
+
+            <!-- 2. Leonardo AI -->
+            <div class="tool-card">
+              <div class="tool-icon-box leonardo-box">
+                <span>L</span>
+              </div>
+              <div class="tool-details">
+                <h4>Leonardo AI</h4>
+                <span>Photorealistic Renders &amp; Realtime Canvas</span>
+              </div>
+            </div>
+
+            <!-- 3. Google AI Studio -->
+            <div class="tool-card">
+              <div class="tool-icon-box studio-box">
+                <span>⚡</span>
+              </div>
+              <div class="tool-details">
+                <h4>Google AI Studio</h4>
+                <span>Multimodal Experiments &amp; Image Reasoning</span>
+              </div>
+            </div>
+
+            <!-- 4. Veo -->
+            <div class="tool-card">
+              <div class="tool-icon-box veo-box">
+                <span>V</span>
+              </div>
+              <div class="tool-details">
+                <h4>Veo</h4>
+                <span>Next-Gen Cinematic Video Generation</span>
+              </div>
+            </div>
+
+            <!-- 5. Flow -->
+            <div class="tool-card">
+              <div class="tool-icon-box flow-box">
+                <span>~</span>
+              </div>
+              <div class="tool-details">
+                <h4>Flow</h4>
+                <span>Generative Motion &amp; Animation Workflows</span>
+              </div>
+            </div>
+
+            <!-- 6. Canva -->
+            <div class="tool-card">
+              <div class="tool-icon-box canva-box">
+                <span>C</span>
+              </div>
+              <div class="tool-details">
+                <h4>Canva</h4>
+                <span>Graphic Layouts &amp; Brand Typography Polish</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         7. CONTACT & CRAZY MEGA FOOTER
+         ========================================================================== -->
+    <footer class="mega-footer" id="contact">
+
+      <!-- Kinetic Dual Infinite Marquee Tickers -->
+      <div class="marquee-strip">
+        <div class="marquee-track marquee-forward">
+          <div class="marquee-content">
+            <span>• NOMIT CHOUDHARY</span>
+            <span>• AI VISUAL CONTENT CREATOR</span>
+            <span>• PROMPT ENGINEER</span>
+            <span>• JEWELLERY &amp; LUXURY RENDERS</span>
+            <span>• AI VIDEO &amp; COMMERCIAL MOTION</span>
+            <span>• AVAILABLE WORLDWIDE</span>
+            <span>• B.TECH ENGINEERING RIGOR</span>
+          </div>
+          <div class="marquee-content" aria-hidden="true">
+            <span>• NOMIT CHOUDHARY</span>
+            <span>• AI VISUAL CONTENT CREATOR</span>
+            <span>• PROMPT ENGINEER</span>
+            <span>• JEWELLERY &amp; LUXURY RENDERS</span>
+            <span>• AI VIDEO &amp; COMMERCIAL MOTION</span>
+            <span>• AVAILABLE WORLDWIDE</span>
+            <span>• B.TECH ENGINEERING RIGOR</span>
+          </div>
+        </div>
+
+        <div class="marquee-track marquee-reverse">
+          <div class="marquee-content outline-text">
+            <span>⚡ LET'S WORK TOGETHER</span>
+            <span>⚡ PHOTOREALISTIC AI VISUALS</span>
+            <span>⚡ VEAO &amp; LEONARDO EXPERT</span>
+            <span>⚡ IMAGE TO VIDEO</span>
+            <span>⚡ VIRAL REELS THAT CONVERT</span>
+            <span>⚡ DROP A LINE TODAY</span>
+          </div>
+          <div class="marquee-content outline-text" aria-hidden="true">
+            <span>⚡ LET'S WORK TOGETHER</span>
+            <span>⚡ PHOTOREALISTIC AI VISUALS</span>
+            <span>⚡ VEAO &amp; LEONARDO EXPERT</span>
+            <span>⚡ IMAGE TO VIDEO</span>
+            <span>⚡ VIRAL REELS THAT CONVERT</span>
+            <span>⚡ DROP A LINE TODAY</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main High-Impact CTA Container -->
+      <div class="footer-cta-container glass-card">
+        <!-- Live Status Bar -->
+        <div class="footer-live-badge-row">
+          <div class="live-status-pill">
+            <span class="status-pulse-dot"></span>
+            <span>OPEN FOR NEW CLIENT WORK</span>
+          </div>
+          <div class="live-clock-pill">
+            <svg class="clock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span id="footerLiveTime">--:--:-- IST</span>
+            <span class="utc-tag">NEW DELHI</span>
+          </div>
+          <div class="response-time-pill">
+            <span>⚡ DIRECT RESPONSE: &lt; 2 HOURS</span>
+          </div>
+        </div>
+
+        <!-- Big Bold Title & Hook -->
+        <div class="footer-big-talk">
+          <span class="script-subtitle">Ready to elevate your visual identity?</span>
+          <h2 class="big-cta-title">
+            LET'S WORK<br>
+            <span class="gradient-fire">TOGETHER.</span>
+          </h2>
+          <p class="cta-subtitle">
+            Need high-end jewellery photography, commercial product renders, cinematic AI video ads, or full creative visual direction? Let's connect and build something extraordinary.
+          </p>
+        </div>
+
+        <!-- Contact Direct Channels & Actions -->
+        <div class="footer-interactive-actions">
+          <!-- Primary WhatsApp / Call Action -->
+          <a href="https://wa.me/917851036568" target="_blank" rel="noreferrer" class="crazy-magnetic-btn" id="magneticCta">
+            <span class="btn-glow-layer"></span>
+            <span class="btn-text">CHAT ON WHATSAPP</span>
+            <span class="btn-arrow-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </span>
+          </a>
+
+          <!-- Direct Phone Call Action -->
+          <a href="tel:7851036568" class="contact-pill-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>+91 7851036568</span>
+          </a>
+
+          <!-- Interactive Copy Email Box -->
+          <div class="copy-email-box" id="copyEmailBox" role="button" tabindex="0" title="Click to copy email address">
+            <div class="copy-email-inner">
+              <svg class="mail-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span class="email-text" id="targetEmailText">nomityt35@gmail.com</span>
+              <span class="copy-icon-wrap">
+                <svg class="copy-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+              </span>
+            </div>
+            <span class="copy-tooltip" id="copyTooltip">Click to Copy</span>
+          </div>
+        </div>
+
+        <!-- Links Matrix: Nav, Tools, Direct Details -->
+        <div class="footer-links-matrix">
+          <!-- Col 1: Navigation Flow -->
+          <div class="footer-matrix-col">
+            <span class="matrix-heading">// WEBSITE FLOW</span>
+            <ul class="matrix-list">
+              <li><a href="#home">01. Home &bull; Intro</a></li>
+              <li><a href="#about">02. About &bull; B.Tech &amp; GenAI</a></li>
+              <li><a href="#ai-projects">03. AI Projects Showcase</a></li>
+              <li><a href="#social-media">04. Social Media &bull; Reels</a></li>
+              <li><a href="#ai-video">05. AI Video &bull; Before/After</a></li>
+              <li><a href="#skills">06. Skills &amp; Tools</a></li>
+              <li><a href="#contact">07. Contact Nomit</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 2: Social Archives -->
+          <div class="footer-matrix-col">
+            <span class="matrix-heading">// CONNECT</span>
+            <div class="social-pills-wrap">
+              <a href="https://www.instagram.com/nomitchoudhary62?stkn=MXdtbWpoMDV2emJjbQ==" target="_blank" rel="noreferrer" class="social-pill" title="Follow Nomit on Instagram">
+                <span>Instagram</span>
+                <span class="arrow-icon">↗</span>
+              </a>
+              <a href="https://www.linkedin.com/in/nomit-choudhary" target="_blank" rel="noreferrer" class="social-pill" title="Connect with Nomit on LinkedIn">
+                <span>LinkedIn</span>
+                <span class="arrow-icon">↗</span>
+              </a>
+              <a href="https://wa.me/917851036568" target="_blank" rel="noreferrer" class="social-pill">
+                <span>WhatsApp</span>
+                <span class="arrow-icon">↗</span>
+              </a>
+              <a href="mailto:nomityt35@gmail.com" class="social-pill">
+                <span>Email</span>
+                <span class="arrow-icon">↗</span>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noreferrer" class="social-pill">
+                <span>YouTube</span>
+                <span class="arrow-icon">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Col 3: Direct Contact Details Card -->
+          <div class="footer-matrix-col">
+            <span class="matrix-heading">// CONTACT DIRECT</span>
+            <div class="direct-contact-card">
+              <div class="dc-name">Nomit Choudhary</div>
+              <div class="dc-title">AI Visual Content Creator</div>
+              <div class="dc-line">📞 <a href="tel:7851036568">+91 7851036568</a></div>
+              <div class="dc-line">✉️ <a href="mailto:nomityt35@gmail.com">nomityt35@gmail.com</a></div>
+              <div class="dc-line">📷 <a href="https://www.instagram.com/nomitchoudhary62?stkn=MXdtbWpoMDV2emJjbQ==" target="_blank" rel="noreferrer">@nomitchoudhary62</a></div>
+              <div class="dc-line">💼 <a href="https://www.linkedin.com/in/nomit-choudhary" target="_blank" rel="noreferrer">Nomit Choudhary</a></div>
+              <div class="dc-line">📍 New Delhi, India &bull; Worldwide Remote</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Back To Top Action Row (Shifted Above) -->
+      <div class="footer-top-action-row">
+        <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to Top">
+          <span class="back-to-top-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="19" x2="12" y2="5"></line>
+              <polyline points="5 12 12 5 19 12"></polyline>
+            </svg>
+          </span>
+          <span class="back-to-top-label">BACK TO TOP</span>
+        </button>
+      </div>
+
+      <!-- Monumental Bottom Watermark Branding (Stacked: NOMIT on top, CHOUDHARY directly below) -->
+      <div class="footer-monumental-brand">
+        <div class="monumental-text-wrap">
+          <span class="monumental-line monumental-nomit">NOMIT</span>
+          <span class="monumental-line monumental-choudhary">CHOUDHARY</span>
+        </div>
+      </div>
+
+      <!-- Bottom Sub-Bar -->
+      <div class="footer-sub-bottom">
+        <div class="sub-bottom-left">
+          <span>&copy; 2026 Nomit Choudhary. All Rights Reserved.</span>
+        </div>
+        <div class="sub-bottom-center">
+          <span class="pulse-sparkle">•</span>
+          <span>Crafted with High Performance &amp; 60fps Canvas Physics</span>
+        </div>
+        <div class="sub-bottom-right">
+          <span class="security-dot"></span>
+          <span>Status: 100% Operational</span>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Floating Feature Action Toast Notification -->
+  <div class="feature-action-toast" id="featureToast" aria-live="polite">
+    <span class="toast-icon" id="toastIcon">⚡</span>
+    <div class="toast-text-wrap">
+      <strong class="toast-title" id="toastTitle">PROMPT ENGINEERING</strong>
+      <span class="toast-desc" id="toastDesc">Latent Space Architecture &amp; Creative Tokens Active</span>
+    </div>
+  </div>
+
+  <script src="app.js?v=15"></script>
+</body>
+</html>
